@@ -2,7 +2,7 @@ define(function(require) {
 	
 	var Adapt = require('coreJS/adapt');
 	var Backbone = require('backbone');
-	var ThemeBlock = require('theme/adapt-contrib-vanilla/js/theme-block');
+	var ThemeBlock = require('theme/adapt-jenison-theme/js/theme-block');
 
 	// Block View
 	// ==========
