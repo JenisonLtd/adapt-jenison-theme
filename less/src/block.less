@@ -2,18 +2,31 @@
 // =============
 
 .block {
-    background-color: @background-color;
+    background-color: @primary-color-inverted;
 
     .block-inner {
         max-width: @device-width-large;
         margin: auto;
-        padding: @block-padding-top 0 @block-padding-bottom;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-left: @block-padding-left;
+        padding-right: @block-padding-right;
         // reduce padding as screen width decreases
         @media all and (max-width: (@device-width-large + 20px)) {
             padding: (@block-padding-top / 2) 20px (@block-padding-bottom / 2);
         }
+
         @media all and (max-width: (@device-width-small + 20px)) {
             padding: (@block-padding-top / 3) 10px (@block-padding-bottom / 3);
+        }
+
+        .component-container {
+            padding-bottom: @block-padding-bottom;
+            padding-top: @block-padding-top;
         }
     }
 
@@ -27,12 +40,45 @@
         }
     }
 
-    .block-body{
+    .block-body {
         margin-bottom: @block-body-margin-bottom;
     }
 
     .block-instruction {
         margin-bottom: @block-instruction-margin-bottom;
         .instruction-text;
+    }
+
+    &.inverted {
+        background: @primary-color;
+
+        .component-title, .component-body, .component-instruction {
+            color: @font-color-inverted;
+
+            p, a, h5, h6, ol, ul, li:before {
+                color: @font-color-inverted;
+            }
+        }
+    }
+
+    &::before {
+        background-color: rgba(0, 0, 0, 0.1);
+        content: "";
+        height: 5px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+    }
+}
+
+
+.size-medium, .size-small {
+    .block {
+        .block-inner {
+            padding-left: @block-padding-left - 4;
+            padding-right: @block-padding-right - 4;
+        }
     }
 }

@@ -1,7 +1,7 @@
 // Icons
 // =====
 
-@font-face {
+/*@font-face {
 	font-family: 'vanilla';
 	src: url('fonts/vanilla.eot');
 	src: url('fonts/vanilla.eot?#iefix') format('embedded-opentype'),
@@ -10,10 +10,10 @@
 		 url('fonts/vanilla.svg#vanilla') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}
+}*/
 
 .icon {
-	font-family: 'vanilla';
+	/*font-family: 'vanilla';*/
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -199,16 +199,20 @@
 	content: "\e632";
 }
 .icon-tick:before {
-	content: "\e633";
+    content: @fa-var-check;
+	/*content: "\e633";*/
 }
 .icon-cross:before {
-	content: "\e634";
+    content: @fa-var-times;
+	/*content: "\e634";*/
 }
 .icon-minus:before {
-	content: "\e635";
+    content: @fa-var-minus-circle;
+	/*content: "\e635";*/
 }
 .icon-plus:before {
-	content: "\e636";
+    content: @fa-var-plus-circle;
+	/*content: "\e636";*/
 }
 .icon-info:before {
 	content: "\e637";
@@ -343,8 +347,10 @@
     }
 }
 .icon-radio-checked:before {
-	content: "\e65d";
+    content: @fa-var-dot-circle-o;
+	/*content: "\e65d";*/
 }
 .icon-radio-unchecked:before {
-	content: "\e65e";
+    content: @fa-var-circle-o;
+	/*content: "\e65e";*/
 }

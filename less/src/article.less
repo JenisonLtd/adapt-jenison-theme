@@ -5,20 +5,24 @@
     background-color: @background-color;
 
     .article-inner {
-        padding: @article-padding-top 0 @article-padding-bottom;
+        overflow: hidden;
+
         @media all and (max-width: (@device-width-large + 20px)) {
             padding: (@article-padding-top / 2) 0 (@article-padding-bottom / 2);
         }
+
         @media all and (max-width: (@device-width-small + 20px)) {
             padding: (@article-padding-top / 3) 0 (@article-padding-bottom / 3);
         }
     }
 
     .article-header {
-        max-width: @device-width-large;
+        background-attachment: scroll;
+        background-clip: border-box;
+        background-color: @primary-color;
+        /*max-width: @device-width-large;
         margin: auto;
-        padding: 0;
-
+        padding: 0;*/
         @media all and (max-width: (@device-width-large + 20px)) {
             padding: 0 20px;
         }
@@ -28,10 +32,29 @@
         }
     }
 
+    .article-header-inner {
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: @ie8-max-width;
+        width: 100%;
+        padding-top: @article-padding-top;
+        padding-bottom: @article-padding-bottom;
+        /*padding-left: @article-header-padding-left;
+        padding-right: @article-header-padding-left;*/
+    }
+
+    .article-header-content {
+        padding-left: @article-header-padding-left;
+        padding-right: @article-header-padding-left;
+    }
+
     .article-title {
-        margin-bottom: @article-title-margin-bottom;
+        /*margin-bottom: @article-title-margin-bottom;*/
         color: @title-color;
         text-align: left;
+        color: @primary-color-inverted;
+        padding-bottom: 9px;
 
         .dir-rtl & {
             text-align: right;
@@ -39,10 +62,11 @@
     }
 
     .article-title-inner {
-        margin-bottom: @article-title-margin-bottom;
+        /*margin-bottom: @article-title-margin-bottom;*/
     }
 
     .article-body {
+        color: @secondary-color;
         margin-bottom: @article-body-margin-bottom;
     }
 

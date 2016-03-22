@@ -5,12 +5,12 @@
 
 @device-width-small: 520px;
 @device-width-medium: 760px;
-@device-width-large: 900px;
+@device-width-large: 1024px;
 
 // Max-widths
 // ==========
 
-@max-width: 1400px;
+@max-width: 1440px;
 @ie8-max-width: 1024px;
 
 // Borders and Outlines
@@ -21,3 +21,70 @@
 @button-border: 0px solid @button-border-color;
 
 @item-border: 3px solid @item-border-color;
+
+
+
+#accessibility-toggle { 
+    background-color: @primary-color !important;
+    border: medium none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: @foreground-color !important;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px !important;
+    font-weight: 900 !important;
+    height: 55px;
+    left: -100%;
+    line-height: 55px !important;
+    max-width: 100%;
+    min-width: 180px;
+    outline: medium none;
+    padding: 0 21px;
+    position: absolute;
+    text-align: center !important;
+    text-decoration: none !important;
+    top: -100%;
+    .transition-all-colors-mixin(400ms);
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+    &:Hover{
+        .transition-background-color-mixin(400ms);
+    }
+}
+.dir-rtl #accessibility-toggle {
+	left:inherit;
+	right:-25px
+}
+#accessibility-toggle:focus {
+	height:auto;
+	width:auto;
+	top:70px;
+	left:10px;
+	z-index:5000;
+	background:@primary-color;
+	border:1px solid @foreground-color-inverted;
+	color:@foreground-color-inverted
+}
+.dir-rtl #accessibility-toggle:focus {
+	left:inherit;
+	right:10px
+}
+* {
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    border-color: inherit;
+    color: inherit;
+    direction: inherit;
+    font-family: inherit;
+    font-size: 1em;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    text-align: inherit;
+    text-rendering: optimizelegibility;
+    z-index: inherit;
+}

@@ -2,6 +2,6 @@
     "screenSize": {
         "small": 520,
         "medium": 760,
-        "large": 900
+        "large": 1024
     }
 }

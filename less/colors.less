@@ -4,9 +4,9 @@
 @white: #ffffff;
 @black: #4b4e4f;
 @blue: #006699;
-@light-grey: #78909c;
-@mid-grey: #546e7a;
-@dark-grey: #37474f;
+@light-grey: #ccc;
+@mid-grey: #aaa;
+@dark-grey: #333;
 @red: #f26c4f;
 @orange: #ee8711;
 @green: #82ca9c;
@@ -36,7 +36,7 @@
 @validation-error: @red;
 @validation-success: @green;
 // Disabled States
-@disabled-color: #727272;
+@disabled-color: #fff;
 @disabled-color-inverted: #ccc;
 
 @transparency: rgba(255,255,255,0.8);
@@ -53,7 +53,7 @@
 
 // Buttons
 @button-color: @secondary-color;
-@button-color-hover: darken(@button-color, 40%);
+@button-color-hover: @mid-grey;
 @button-color-disabled: @disabled-color;
 
 @button-text-color: @secondary-color-inverted;
@@ -67,7 +67,7 @@
 // Navigation
 @navigation-color: @tertiary-color;
 
-@navigation-icon-color: @tertiary-color-inverted;
+@navigation-icon-color: @primary-color;
 @navigation-icon-color-hover: darken(@navigation-icon-color, 40%);
 
 @navigation-progress-color: @navigation-icon-color;
@@ -103,13 +103,13 @@
 // Components
 @component-background-color: darken(@background-color, 10%);
 
-@item-color: @primary-color;
+@item-color: @primary-color-inverted;
 @item-color-hover: darken(@item-color, 20%);
 @item-color-disabled: @disabled-color;
 @item-color-visited: desaturate(@item-color, 90%);
 @item-color-selected: @item-color-hover;
 
-@item-text-color: @primary-color-inverted;
+@item-text-color: @black;
 @item-text-color-hover: @item-text-color;
 @item-text-color-disabled: @item-text-color;
 @item-text-color-visited: @item-text-color;

@@ -1,29 +1,50 @@
-@duration: 0.25s;
+@duration: 400;
 
 .transition-all-colors {
-	-webkit-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-	-moz-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-	-ms-transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
-	transition: background-color @duration ease-in, color @duration ease-in, border-color @duration ease-in;
+	-webkit-transition: background-color @duration ease, color @duration ease, border-color @duration ease;
+	-moz-transition: background-color @duration ease, color @duration ease, border-color @duration ease;
+	-ms-transition: background-color @duration ease, color @duration ease, border-color @duration ease;
+	transition: background-color @duration ease, color @duration ease, border-color @duration ease;
 } 
 
+.transition-all-colors-mixin(@d: 400ms){
+	-webkit-transition: background-color @d ease, color @d ease, border-color @d ease;
+	-moz-transition: background-color @d ease, color @d ease, border-color @d ease;
+	-ms-transition: background-color @d ease, color @d ease, border-color @d ease;
+	transition: background-color @d ease, color @d ease, border-color @d ease;
+}
+
 .transition-color {
-	-webkit-transition: color @duration ease-in;
-	-moz-transition: color @duration ease-in;
-	-ms-transition: color @duration ease-in;
-	transition: color @duration ease-in;
+	-webkit-transition: color @duration ease;
+	-moz-transition: color @duration ease;
+	-ms-transition: color @duration ease;
+	transition: color @duration ease;
+}
+
+.transition-color-mixin(@d: 400ms){
+	-webkit-transition: color @d ease;
+	-moz-transition: color @d ease;
+	-ms-transition: color @d ease;
+	transition: color @d ease;
 }
 
 .transition-background-color {
-	-webkit-transition: background-color @duration ease-in;
-	-moz-transition: background-color @duration ease-in;
-	-ms-transition: background-color @duration ease-in;
-	transition: background-color @duration ease-in;
+	-webkit-transition: background-color @duration ease;
+	-moz-transition: background-color @duration ease;
+	-ms-transition: background-color @duration ease;
+	transition: background-color @duration ease;
+}
+
+.transition-background-color-mixin(@d: 400ms){
+	-webkit-transition: background-color @d ease;
+	-moz-transition: background-color @d ease;
+	-ms-transition: background-color @d ease;
+	transition: background-color @d ease;
 }
 
 .transition-border-color {
-	-webkit-transition: border-color @duration ease-in;
-	-moz-transition: border-color @duration ease-in;
-	-ms-transition: border-color @duration ease-in;
-	transition: border-color @duration ease-in;
+	-webkit-transition: border-color @duration ease;
+	-moz-transition: border-color @duration ease;
+	-ms-transition: border-color @duration ease;
+	transition: border-color @duration ease;
 }

@@ -1,17 +1,59 @@
 .mcq-component {
     .mcq-item {
-        background-color:@item-color;
-        position:relative;
+        margin-bottom: @item-margin-bottom;
+        background-color: @primary-color-inverted;
+        overflow: hidden;
+        .transition-background-color-mixin(400ms);
+        border: 1px solid @light-grey;
+        box-shadow: 0 1px 0 @light-grey;
+
+        &:hover{
+            .transition-background-color-mixin(100ms);
+        }
     }
 
     .mcq-item label {
+        background-color: @primary-color-inverted;
         color:@item-text-color;
         display:block;
-        margin-bottom:@item-margin-bottom;
+        margin: 0;
         position:relative;
         z-index:1;
         background-color:@item-color;
         cursor:pointer;
+        .transition-background-color-mixin(400ms);
+        
+        .mcq-answer-icon {
+
+            &.radio {
+            &:before {
+                content: @fa-var-circle-o;
+                }
+            }
+        &.checkbox {
+            &:before {
+                content: @fa-var-square-o
+                }
+            }
+        }
+
+        &:hover{
+            .transition-background-color-mixin(100ms);
+            .mcq-answer-icon{
+
+            &.radio {
+            &:before {
+                color: @primary-color;
+                }
+            }
+        &.checkbox {
+            &:before {
+                color: @primary-color;
+                }
+            }
+
+            }
+        }
 
         &.selected {
             color:@item-text-color-selected;
@@ -22,12 +64,14 @@
 
                  &.radio {
                     &:before {
-                        content: "\e65d";
+                        content: @fa-var-dot-circle-o;
+                        /*content: "\e65d";*/
                     }
                 }
                 &.checkbox {
                     &:before {
-                        content: "\e633";
+                        content: @fa-var-check;
+                        /*content: "\e633";*/
                     }
                     border: 3px solid @item-text-color-selected;
                     width:18px;
@@ -86,16 +130,16 @@
 
     &.disabled {
         .mcq-item label.selected.disabled {
-            color:@item-text-color-selected;
+            /*color:@item-text-color-selected;*/
             background-color:@item-color-selected;
-            border-color:@item-border-color-selected;
-            cursor:default;
+            /*border-color:@item-border-color-selected;
+            cursor:default;*/
         }
         .mcq-item label.disabled {
-            color:@item-text-color-disabled;
+            /*color:@item-text-color-disabled;*/
             background-color:@item-color-disabled;
-            border-color:@item-border-color-disabled;
-            cursor:default;
+            /*border-color:@item-border-color-disabled;
+            cursor:default;*/
 
             .mcq-item-icon {
                 &.mcq-correct-icon {
